@@ -11,6 +11,8 @@
 
     Firebase
 
+    Formik
+
 ⭐ Main Features
 
     User calorie calculation based on age, gender, height, weight, and activity level
