@@ -1,11 +1,11 @@
 import React from "react";
 
 //Screens
-import Login from './screens/Login';
+import HomeScreen from "./screens/HomeScreen";
 
 export default function App() {
   return (
-    <Login/>
+    <HomeScreen/>
   );
 }
 

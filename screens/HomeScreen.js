@@ -11,25 +11,29 @@ import {
     PageTitle,
     Subtitle,
     StyledFormArea
-} from './../components/styles'
+} from '../components/styles'
 
+import { View } from "react-native";
 
-export default function Login() {
+export default function HomeScreen() {
     return(
         <StyledContainer>
             <StatusBar style="dark"/>
             <InnerContainer>
-                <PageLogo resizeMode='cover' source={require('./../assets/welcome-image.png')}/>
                 <PageTitle>Calorie Calculator</PageTitle>
-                <Subtitle>Account Login</Subtitle>
-
-                <Formik
-                    initialValues={{email: '', password: ''}} 
-                >
-
-                </Formik>
+                <PageLogo resizeMode='cover' source={require('./../assets/welcome-image.png')}/>
+                
             
             </InnerContainer>
         </StyledContainer>
     )
+
+    const HomeElementContainer = ({title, icon, description }) => {
+        return (
+            <View>
+                
+            </View>
+        )
+    }
+    
 }

@@ -11,13 +11,13 @@ export const Colors ={
     secondary: "#ESE7EB",
     tertiary: "#1F2937",
     darkLight: "#9CA3AF",
-    brand: "#6D28D9",
+    black: "#000000",
     green: "#10B981",
     red: "#EF4444"
 
 };
 
-const { primary, secondary, tertiary, darkLight, brand, green, red} = Colors;
+const { primary, secondary, tertiary, darkLight, black, green, red} = Colors;
 
 export const StyledContainer = styled.View`
     flex: 1;
@@ -34,7 +34,7 @@ export const InnerContainer = styled.View`
 
 export const PageLogo = styled.Image`
     width: 250px;
-    height: 200px;
+    height: 250px;
 
 `
 
@@ -42,7 +42,7 @@ export const PageTitle = styled.Text`
     font-size: 30px;
     text-align: center;
     font-weight: bold;
-    color: ${brand};
+    color: ${black};
     padding: 10px;
 `
 export const Subtitle = styled.Text`
@@ -53,7 +53,28 @@ export const Subtitle = styled.Text`
     color: ${tertiary};
 `
 
-export const StyledFormArea = styled.View`
-    width: 90%;
+// export const StyledFormArea = styled.View`
+//     width: 90%;
+// `
+
+export const ElementTitle = styled.Text`
+    font-size: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: ${black};
+    padding: 5px;
 `
 
+export const LeftIcon = styled.Image`
+    left: 15px;
+    top: 38px;
+    position: absolute;
+    z-index:1;
+`
+
+export const ElementDescription = styled.Text`
+    font-size: 10px;
+    text-align: left;
+    color: ${black};
+    padding: 5px;
+`
