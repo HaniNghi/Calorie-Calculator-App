@@ -1,80 +1,93 @@
 import styled from 'styled-components'
-import {View, Text, Image} from 'react-native'
+import { View, Text, Image, StyleSheet } from 'react-native'
 import Constants from 'expo-constants'
 
 const StatusBarHeight = Constants.statusBarHeight
 
 //colors
 
-export const Colors ={
+export const Colors = {
     primary: "#ffffff",
-    secondary: "#ESE7EB",
+    secondary: "#E5E7EB",
     tertiary: "#1F2937",
     darkLight: "#9CA3AF",
     black: "#000000",
     green: "#10B981",
-    red: "#EF4444"
-
+    red: "#EF4444",
 };
 
-const { primary, secondary, tertiary, darkLight, black, green, red} = Colors;
+const { primary, secondary, tertiary, darkLight, black, green, red } = Colors;
 
-export const StyledContainer = styled.View`
-    flex: 1;
-    padding: 25px;
-    padding-top: ${StatusBarHeight + 10}px;
-    background-color: ${primary};
-`
+export const styles = StyleSheet.create({
+    styledContainer: {
+        flex: 1,
+        padding: 25,
+        paddingTop: StatusBarHeight + 10,
+        backgroundColor: primary,
+    },
 
-export const InnerContainer = styled.View`
-    flex: 1;
-    width: 100%;
-    align-items: center;
-`
+    innerContainer: {
+        flex: 1,
+        width: "100%",
+        alignItems: "center",
+    },
 
-export const PageLogo = styled.Image`
-    width: 250px;
-    height: 250px;
+    pageLogo: {
+        width: 250,
+        height: 250,
+        resizeMode: "contain",
+    },
 
-`
+    pageTitle: {
+        fontSize: 30,
+        textAlign: "center",
+        fontWeight: "bold",
+        color: black,
+        padding: 10,
+    },
 
-export const PageTitle = styled.Text`
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    color: ${black};
-    padding: 10px;
-`
-export const Subtitle = styled.Text`
-    font-size: 18px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    font-weigth: bold;
-    color: ${tertiary};
-`
+    background: {
+        height: 70,
+        width: "100%",
+        justifyContent: "flex-end",
+        marginBottom: 16,
+    },
+    image: {
+        borderRadius: 20,
+    },
 
-// export const StyledFormArea = styled.View`
-//     width: 90%;
-// `
+    cardContainer: {
+        backgroundColor: "white",
+        padding: 16,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        flexDirection: "column",
 
-export const ElementTitle = styled.Text`
-    font-size: 15px;
-    text-align: left;
-    font-weight: bold;
-    color: ${black};
-    padding: 5px;
-`
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: -2 },
+        shadowOpacity: 0.15,
+        shadowRadius: 5,
+        elevation: 4,
+    },
+    row: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    cardTitle: {
+        color:"black",
+        fontSize: 16,
+        fontWeight: "700",
+    },
 
-export const LeftIcon = styled.Image`
-    left: 15px;
-    top: 38px;
-    position: absolute;
-    z-index:1;
-`
+    leftIcon: {
+        width: 40,
+        height: 40,
+        marginRight: 12,
+    },
 
-export const ElementDescription = styled.Text`
-    font-size: 10px;
-    text-align: left;
-    color: ${black};
-    padding: 5px;
-`
+    cardDescription: {
+        fontSize: 13,
+        color: "#666",
+        marginTop: 2,
+    },
+});
